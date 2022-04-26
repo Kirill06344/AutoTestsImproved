@@ -4,10 +4,11 @@ import core.BaseSeleniumPage;
 import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends BaseSeleniumPage {
-  TopToolbar toolbar = new TopToolbar();
+  TopToolbar toolbar;
   public MainPage()
   {
-    PageFactory.initElements(driver, toolbar);
+    toolbar = new TopToolbar();
+    PageFactory.initElements(driver, this);
   }
 
   public MessagePage getMessagePage()

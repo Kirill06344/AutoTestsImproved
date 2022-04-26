@@ -10,6 +10,6 @@ public class LoginFromOkTest extends BaseSeleniumTest {
     public void checkPageEntry()
     {
         LoginPage loginPage = new LoginPage();
-        loginPage.login().getMessagePage();
+        loginPage.login();
     }
 }

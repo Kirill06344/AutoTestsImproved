@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 //для настройки и инициализации драйвера
 abstract public class BaseSeleniumTest {
     protected WebDriver driver;
-
     @Before
     public void setUp()
     {
@@ -23,11 +22,10 @@ abstract public class BaseSeleniumTest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         BaseSeleniumPage.setDriver(driver);
     }
-
     @After
     public void tearDown()
     {
       driver.close();//закрытие драйвера
-        // driver.quit();
+      driver.quit();
     }
 }
